@@ -8,7 +8,7 @@
           <span v-if="!$store.state.isCollapse">UItima</span>
         </div>
         <div class="header-content">
-          <div class="w-[60px] h-[60px] flex justify-center items-center"
+          <div class="breadcrumb-btn hover:[background:var(--el-menu-hover-bg-color)]"
             @click="$store.commit({ type: 'toggleCollapse' })">
             <icon-ep-fold v-if="!$store.state.isCollapse" class="cursor-pointer flex-1" />
             <icon-ep-expand v-else class="cursor-pointer" />
@@ -81,6 +81,10 @@
       width: calc(100vw - var(--el-aside-width));
       box-shadow: 0 4px 4px -2px rgb(0 0 0 / 5%);
       border-bottom: solid 1px var(--el-menu-border-color);
+
+      .breadcrumb-btn {
+        @apply w-[60px] h-[60px] flex justify-center items-center;
+      }
     }
 
     &.is-collapse {
