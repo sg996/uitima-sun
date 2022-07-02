@@ -23,11 +23,11 @@
               :collapse-transition="false" router>
               <el-menu-item index="1" :route="{ path: '/home' }">
                 <icon-ep-menu />
-                <template #title>Home</template>
+                <template #title><span class="w-[150px] ml-[10px] truncate">首页</span></template>
               </el-menu-item>
-              <el-menu-item index="2" :route="{ path: '/about' }">
-                <icon-ep-menu />
-                <template #title>About</template>
+              <el-menu-item index="2" :route="{ path: '/games' }">
+                <icon-ion-game-controller />
+                <template #title><span class="w-[150px] ml-[10px] truncate">游戏</span></template>
               </el-menu-item>
             </el-menu>
           </el-aside>

@@ -20,7 +20,7 @@ module.exports = defineConfig({
           ElementPlusResolver(),
           IconsResolver({
             prefix: 'Icon',
-            enabledCollections: ['ep', 'mdi']
+            enabledCollections: ['ep', 'mdi', 'ion']
           })
         ]
       }),
