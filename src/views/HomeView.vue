@@ -30,4 +30,6 @@
 </template>
 
 <script setup>
+const msg = 'hello world'
+console.log(msg)
 </script>
