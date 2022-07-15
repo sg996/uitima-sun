@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
 import { nanoid } from 'nanoid'
 const menuList = reactive([
   { id: nanoid(), name: 'Tic Tac Toe', path: '/games/001', label: '001' },

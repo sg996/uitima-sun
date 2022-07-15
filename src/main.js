@@ -6,4 +6,14 @@ import store from './store'
 
 import './assets/style/base.scss'
 
-createApp(App).use(store).use(router).mount('#app')
+import 'element-plus/es/components/message/style/css'
+import 'element-plus/es/components/message-box/style/css'
+import { ElMessage, ElMessageBox } from 'element-plus'
+
+const app = createApp(App)
+app.use(store).use(router)
+
+app.component('ElMessage', ElMessage)
+app.component('ElMessageBox', ElMessageBox)
+
+app.mount('#app')

@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h3>home</h3>
+    <el-button :plain="true" @click="open1">message</el-button>
     <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
       <div class="flex-shrink-0">
         <img class="h-12 w-12" :src="require('@/assets/logo.png')" alt="ChitChat Logo">
@@ -32,4 +33,31 @@
 <script setup>
 const msg = 'hello world'
 console.log(msg)
+
+const open1 = () => {
+  // ElMessage({
+  //   showClose: true,
+  //   message: 'This is a message.'
+  // })
+  ElMessageBox.confirm(
+    'proxy will permanently delete the file. Continue?',
+    'Warning',
+    {
+      confirmButtonText: 'OK',
+      cancelButtonText: 'Cancel',
+      type: 'warning',
+      draggable: true
+    }
+  ).then(() => {
+    ElMessage({
+      type: 'success',
+      message: 'Delete completed'
+    })
+  }).catch(() => {
+    ElMessage({
+      type: 'info',
+      message: 'Delete canceled'
+    })
+  })
+}
 </script>
